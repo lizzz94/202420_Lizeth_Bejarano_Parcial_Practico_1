@@ -1,5 +1,6 @@
 # Ejemplo Parcial Práctico 1
-
+LIZETH BEJARANO MURILLO
+202311194
 ## Instrucciones
 
 1. Haga un _fork_ de este repositorio
