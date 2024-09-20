@@ -5,9 +5,7 @@ import java.util.List;
 
 import co.edu.uniandes.dse.parcialprueba.podam.DateStrategy;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
@@ -22,6 +20,11 @@ public class ChefEntity extends BaseEntity {
     @Temporal(TemporalType.DATE)
 	@PodamStrategyValue(DateStrategy.class)
 	private Date birthDate;
+    
+    @PodamExclude
+    @ManyToMany(mappedBy = "chefs")
+    private List<ClaseCocinaEntity> clases = new ArrayList<>();
+
     private String name;
 	private String description;
 	private String image;
@@ -32,3 +35,4 @@ public class ChefEntity extends BaseEntity {
     private Long Id;
 
 }
+
